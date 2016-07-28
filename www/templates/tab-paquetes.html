@@ -1,0 +1,16 @@
+<ion-view view-title="Paquetes">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="paquete in paquetes" type="item-text-wrap" href="#/tab/paquetes/{{paquete.id}}">
+        <img ng-src="{{paquete.face}}">
+        <h2>{{paquete.name}}</h2>
+        <p>{{paquete.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(paquete)">
+          Borrar
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

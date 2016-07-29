@@ -1,28 +1,8 @@
 angular.module('starter.controllers', [])
 
-.controller('InitCtrl', function($scope) {
-
-})
+.controller('InitCtrl', function($scope) {})
 
 .controller('DashCtrl', function($scope) {})
-
-.controller('ChatsCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
-})
-
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
 
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {
@@ -39,4 +19,31 @@ angular.module('starter.controllers', [])
 
 .controller('PaqueteDetailCtrl', function($scope, $stateParams, Paquetes) {
   $scope.paquete = Paquetes.get($stateParams.paqueteId);
-});
+})
+
+.controller('CalculadoraCtrl', function($scope) {})
+
+.controller('PreavisoCtrl', function($scope) {})
+
+.controller('SucursalesCtrl', function($scope, Sucursales) {
+  $scope.sucursales = Sucursales.all();
+  $scope.remove = function(sucursal) {
+    Sucursales.remove(sucursal);
+  };
+})
+
+.controller('SucursalDetailCtrl', function($scope, $stateParams, Sucursales) {
+  $scope.sucursal = Sucursales.get($stateParams.sucursalId);
+})
+
+.controller('OfertasCtrl', function($scope, Ofertas) {
+  $scope.ofertas = Ofertas.all();
+  $scope.remove = function(oferta) {
+    Ofertas.remove(oferta);
+  };
+})
+
+.controller('OfertaDetailCtrl', function($scope, $stateParams, Ofertas) {
+  $scope.oferta = Ofertas.get($stateParams.ofertaId);
+})
+;

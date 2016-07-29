@@ -1,82 +1,30 @@
 angular.module('starter.services', [])
 
-.factory('Chats', function() {
-  // Might use a resource here that returns a JSON array
-
-  // Some fake testing data
-  var chats = [{
-    id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
-  }, {
-    id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
-  }, {
-    id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
-  }, {
-    id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
-  }, {
-    id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
-  }];
-
-  return {
-    all: function() {
-      return chats;
-    },
-    remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
-    },
-    get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
-        }
-      }
-      return null;
-    }
-  };
-})
-
 .factory('Paquetes', function() {
-  // Might use a resource here that returns a JSON array
-
-  // Some fake testing data
   var paquetes = [{
     id: 0,
     name: 'Zapatos',
-    lastText: 'You on your way?',
+    lastText: 'AMAZON',
     face: 'img/ben.png'
   }, {
     id: 1,
     name: 'Camisetas',
-    lastText: 'Hey, it\'s me',
+    lastText: 'EBAY',
     face: 'img/max.png'
   }, {
     id: 2,
     name: 'Juguetes',
-    lastText: 'I should buy a boat',
+    lastText: 'AMAZON',
     face: 'img/adam.jpg'
   }, {
     id: 3,
     name: 'Libros',
-    lastText: 'Look at my mukluks!',
+    lastText: 'AMAZON',
     face: 'img/perry.png'
   }, {
     id: 4,
     name: 'Video Juego',
-    lastText: 'This is wicked good ice cream.',
+    lastText: 'NEWEGG',
     face: 'img/mike.png'
   }];
 
@@ -91,6 +39,93 @@ angular.module('starter.services', [])
       for (var i = 0; i < paquetes.length; i++) {
         if (paquetes[i].id === parseInt(paqueteId)) {
           return paquetes[i];
+        }
+      }
+      return null;
+    }
+  };
+})
+
+.factory('Sucursales', function() {
+  var sucursales = [{
+    id: 0,
+    name: 'Desamparados',
+    lastText: '',
+    face: 'img/ben.png'
+  }, {
+    id: 1,
+    name: 'Limón Centro',
+    lastText: '',
+    face: 'img/max.png'
+  }, {
+    id: 2,
+    name: 'Curridabat',
+    lastText: '',
+    face: 'img/adam.jpg'
+  }, {
+    id: 3,
+    name: 'Heredia',
+    lastText: '',
+    face: 'img/perry.png'
+  }, {
+    id: 4,
+    name: 'San Francisco de Heredia',
+    lastText: '',
+    face: 'img/mike.png'
+  }];
+
+  return {
+    all: function() {
+      return sucursales;
+    },
+    remove: function(sucursal) {
+      sucursales.splice(sucursales.indexOf(sucursal), 1);
+    },
+    get: function(sucursalId) {
+      for (var i = 0; i < sucursales.length; i++) {
+        if (sucursales[i].id === parseInt(sucursalId)) {
+          return sucursales[i];
+        }
+      }
+      return null;
+    }
+  };
+})
+
+.factory('Ofertas', function() {
+  var ofertas = [{
+    id: 0,
+    name: 'Amazon.com',
+    lastText: '',
+    face: 'img/ben.png'
+  }, {
+    id: 1,
+    name: 'Ebay.com',
+    lastText: '',
+    face: 'img/max.png'
+  }, {
+    id: 2,
+    name: 'Soccer.com',
+    lastText: 'I should buy a boat',
+    face: 'img/adam.jpg'
+  }, {
+    id: 3,
+    name: 'Woot.com',
+    lastText: 'Look at my mukluks!',
+    face: 'img/perry.png'
+  }];
+
+  return {
+    all: function() {
+      return ofertas;
+    },
+    remove: function(oferta) {
+      ofertas.splice(ofertas.indexOf(oferta), 1);
+    },
+    get: function(ofertaId) {
+      for (var i = 0; i < ofertas.length; i++) {
+        if (ofertas[i].id === parseInt(ofertaId)) {
+          return ofertas[i];
         }
       }
       return null;

@@ -30,14 +30,15 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
   // Each state's controller can be found in controllers.js
   $stateProvider
   //Initial State for initial html
+  // .state('base', {
+  //   url: '',
+  //   abstract: true,
+  //   templateUrl: 'templates/base.html'
+  // })
+
   .state('init', {
-    url: '/',
-    //views: {
-      //'init': {
-        templateUrl: 'init-display.html'
-        //controller: 'InitCtrl'
-      //}
-    //}
+    url:'/init',
+    templateUrl: 'templates/init-display.html',
   })
 
   // setup an abstract state for the tabs directive
@@ -48,36 +49,6 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
   })
 
   // Each tab has its own nav history stack:
-
-  .state('tab.dash', {
-    url: '/dash',
-    views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
-      }
-    }
-  })
-
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-
-  .state('tab.chat-detail', {
-    url: '/chats/:chatId',
-    views: {
-      'tab-chats': {
-        templateUrl: 'templates/chat-detail.html',
-        controller: 'ChatDetailCtrl'
-      }
-    }
-  })
 
   .state('tab.account', {
     url: '/account',
@@ -107,7 +78,69 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
        controller: 'PaqueteDetailCtrl'
      }
    }
- });  
- // if none of the above states are matched, use this as the fallback
- $urlRouterProvider.otherwise('tab/dash');
-});
+ })
+ 
+ .state('tab.calculadora', {
+    url: '/calculadora',
+    views: {
+      'tab-calculadora': {
+        templateUrl: 'templates/tab-calculadora.html',
+        controller: 'CalculadoraCtrl'
+      }
+    }
+  })
+  
+   .state('tab.preaviso', {
+    url: '/preaviso',
+    views: {
+      'tab-preaviso': {
+        templateUrl: 'templates/tab-preaviso.html',
+        controller: 'PreavisoCtrl'
+      }
+    }
+  })
+  
+ .state('tab.sucursales', {
+   url: '/sucursales',
+   views: {
+     'tab-sucursales': {
+       templateUrl: 'templates/tab-sucursales.html',
+       controller: 'SucursalesCtrl'
+     }
+   }
+ })
+ 
+ .state('tab.sucursal-detail', {
+   url: '/sucursales/:sucursalId',
+   views: {
+     'tab-sucursales': {
+       templateUrl: 'templates/sucursal-detail.html',
+       controller: 'SucursalDetailCtrl'
+     }
+   }
+ })
+ 
+ .state('tab.ofertas', {
+   url: '/ofertas',
+   views: {
+     'tab-ofertas': {
+       templateUrl: 'templates/tab-ofertas.html',
+       controller: 'OfertasCtrl'
+     }
+   }
+ })
+ 
+ .state('tab.oferta-detail', {
+   url: '/ofertas/:ofertaId',
+   views: {
+     'tab-ofertas': {
+       templateUrl: 'templates/oferta-detail.html',
+       controller: 'OfertaDetailCtrl'
+     }
+   }
+ })
+
+  ;  
+  $urlRouterProvider.otherwise('/init');
+}
+);

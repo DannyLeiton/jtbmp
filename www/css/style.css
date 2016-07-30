@@ -1,4 +1,14 @@
 /* Empty. Add your own CSS if you like */
-#InitRow1, #InitRow2, #InitImage{
-    text-align: center;
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.center-init {
+    margin-top: 30%;
+}
+
+.init-button {
+    width: 100%
 }

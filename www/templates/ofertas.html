@@ -1,0 +1,19 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Ofertas</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+<ion-view view-title="">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="oferta in ofertas" type="item-text-wrap" href="#/tab/ofertas/{{oferta.id}}">
+        <img ng-src="{{oferta.face}}">
+        <h2>{{oferta.name}}</h2>
+        <p>{{oferta.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-modal-view>

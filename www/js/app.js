@@ -39,6 +39,7 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
   .state('init', {
     url:'/init',
     templateUrl: 'templates/init-display.html',
+    controller: 'InitCtrl'
   })
 
   // setup an abstract state for the tabs directive
@@ -99,7 +100,11 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
       }
     }
   })
-  
+.state('sucursales',{
+  url: '/sucursales-alone',
+   templateUrl: 'templates/tab-sucursales.html',
+       controller: 'SucursalesCtrl'
+})
  .state('tab.sucursales', {
    url: '/sucursales',
    views: {

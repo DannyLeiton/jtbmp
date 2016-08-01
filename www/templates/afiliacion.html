@@ -8,41 +8,49 @@
   <ion-content> 
     <form ng-submit="doAfiliacion()">
       <div class="list">
-        <label class="item item-input item-stacked-label">
+        <label class="item item-input">
           <span class="input-label">Nombre:</span>
           <input type="text" ng-model="afiliacionData.nombre">
         </label>
-        <label class="item item-input item-stacked-label">
+        <label class="item item-input">
           <span class="input-label">Primer Apellido:</span>
           <input type="text" ng-model="afiliacionData.apellido1">
         </label>
-        <label class="item item-input item-stacked-label"">
+        <label class="item item-input">
           <span class="input-label">Segundo Apellido:</span>
           <input type="text" ng-model="afiliacionData.apellido2">
         </label>
-        <label class="item item-input item-stacked-label"">
+        <label class="item item-input">
           <span class="input-label">Tipo Identificación:</span>
-          <button class="button button-block button-positive">Persona Física</button>
+          <select>
+            <option selected>Persona Física</option>
+            <option>Persona Jurídica</option>
+          </select>
         </label>
-        <label class="item item-input item-stacked-label"">
+        <label class="item item-input">
           <span class="input-label">Número de Identificación:</span>
           <input type="number">
         </label>
-        <label class="item item-input item-stacked-label"">
+        <label class="item item-input">
           <span class="input-label">Teléfono Fijo:</span>
           <input type="tel">
         </label>
-        <label class="item item-input item-stacked-label"">
+        <label class="item item-input">
           <span class="input-label">Teléfono Móvil:</span>
           <input type="tel">
         </label>
-        <label class="item item-input item-stacked-label"">
+        <label class="item item-input">
           <span class="input-label">Correo Electrónico:</span>
           <input type="email">
         </label>
-        <label class="item item-input item-stacked-label"">
+        <label class="item item-input">
           <span class="input-label">Sucursal de Afiliación:</span>
-          <button class="button button-block button-positive">Seleccionar</button>
+          <select>
+            <option selected>Guadalupe</option>
+            <option>Curridabat</option>
+            <option>Pavas</option>
+            <option>Escazú</option>
+          </select>
         </label>
         <label class="item">
           <button class="button button-block button-positive" type="submit">Afiliarme</button>

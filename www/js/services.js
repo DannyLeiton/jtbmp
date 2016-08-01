@@ -50,28 +50,43 @@ angular.module('starter.services', [])
   var sucursales = [{
     id: 0,
     name: 'Desamparados',
-    lastText: '',
-    face: 'img/ben.png'
+    telefono: '2528-3737',
+    email: 'bejetbox@jetbox.com',
+    horario: 'Lunes - Miércoles - Domingos: 10:00am-1:00pm 1:30pm-8:00pm Martes - Jueves - Viernes - Sábados: 10:00am-8:00pm',
+    direccion: 'Centro Comercial Expresso Desamparados(frente a entrada a Ferretería EPA)',
+    face: 'img/desampa.png'
   }, {
     id: 1,
     name: 'Limón Centro',
-    lastText: '',
-    face: 'img/max.png'
+    telefono: '2528-3737',
+    email: 'bejetbox@jetbox.com',
+    horario: 'Lunes - Miércoles - Domingos: 10:00am-1:00pm 1:30pm-8:00pm Martes - Jueves - Viernes - Sábados: 10:00am-8:00pm',
+    direccion: 'Centro Comercial Expresso Limón(frente a entrada a Ferretería EPA)',
+    face: 'img/limon.png'
   }, {
     id: 2,
     name: 'Curridabat',
-    lastText: '',
-    face: 'img/adam.jpg'
+    telefono: '2528-3737',
+    email: 'bejetbox@jetbox.com',
+    horario: 'Lunes - Miércoles - Domingos: 10:00am-1:00pm 1:30pm-8:00pm Martes - Jueves - Viernes - Sábados: 10:00am-8:00pm',
+    direccion: 'Centro Comercial Expresso Curridabat(frente a entrada a Ferretería EPA)',
+    face: 'img/curri.png'
   }, {
     id: 3,
     name: 'Heredia',
-    lastText: '',
-    face: 'img/perry.png'
+    telefono: '2528-3737',
+    email: 'bejetbox@jetbox.com',
+    horario: 'Lunes - Miércoles - Domingos: 10:00am-1:00pm 1:30pm-8:00pm Martes - Jueves - Viernes - Sábados: 10:00am-8:00pm',
+    direccion: 'Centro Comercial Expresso Heredia(frente a entrada a Ferretería EPA)',
+    face: 'img/heredia.png'
   }, {
     id: 4,
     name: 'San Francisco de Heredia',
-    lastText: '',
-    face: 'img/mike.png'
+    telefono: '2528-3737',
+    email: 'bejetbox@jetbox.com',
+    horario: 'Lunes - Miércoles - Domingos: 10:00am-1:00pm 1:30pm-8:00pm Martes - Jueves - Viernes - Sábados: 10:00am-8:00pm',
+    direccion: 'Centro Comercial Expresso San Francisco(frente a entrada a Ferretería EPA)',
+    face: 'img/sanfra.png'
   }];
 
   return {
@@ -97,22 +112,22 @@ angular.module('starter.services', [])
     id: 0,
     name: 'Amazon.com',
     lastText: '',
-    face: 'img/ben.png'
+    face: 'img/amazon.png'
   }, {
     id: 1,
     name: 'Ebay.com',
     lastText: '',
-    face: 'img/max.png'
+    face: 'img/ebay.png'
   }, {
     id: 2,
     name: 'Soccer.com',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
+    lastText: '',
+    face: 'img/soccer.png'
   }, {
     id: 3,
     name: 'Woot.com',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
+    lastText: '',
+    face: 'img/woot.png'
   }];
 
   return {

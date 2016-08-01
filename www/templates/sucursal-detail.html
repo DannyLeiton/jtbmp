@@ -4,11 +4,52 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-view view-title="{{sucursal.name}}">
+<ion-view view-title="JetBox {{sucursal.name}}">
   <ion-content class="padding">
-    <img ng-src="{{sucursal.face}}" style="width: 64px; height: 64px">
-    <p>
-      {{sucursal.lastText}}
-    </p>
+    <div class="row">
+      <div class="col">    
+      </div>
+      <div class="col"> 
+        <img ng-src="{{sucursal.face}}" style="width: 64px; height: 64px;">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">    
+        <span class="input-label">Teléfono:</span>
+      </div>
+      <div class="col"> 
+        {{sucursal.telefono}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">    
+        <span class="input-label">Email:</span>
+      </div>
+      <div class="col"> 
+        {{sucursal.email}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">    
+        <span class="input-label">Horario:</span>
+      </div>
+      <div class="col"> 
+        {{sucursal.horario}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">    
+        <span class="input-label">Dirección:</span>
+      </div>
+      <div class="col"> 
+        {{sucursal.direccion}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col"> 
+        <button class="button button-small button-positive">Ver Mapa</button>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

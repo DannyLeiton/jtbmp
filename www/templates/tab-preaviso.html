@@ -1,43 +1,20 @@
 <ion-view view-title="Preaviso">
   <ion-content>
-    <table>
-      <tr>
-        <td>Contrato:</td>
-        <td><strong>Movimiento</strong></td>
-      </tr>
-      <tr>
-        <td>Categoría:</td>
-        <td>
-          <select>
-            <option selected>Todas</option>
-            <option>Accesorios y Ropa</option>
-            <option>Adornos</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>Artículo:</td>
-        <td>
-          <select>
-            <option selected>Todas</option>
-            <option>Accesorios y Ropa</option>
-            <option>Adornos</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>Valor $:</td>
-        <td><input type="number" step="any"/></td>
-      </tr>
-      <tr>
-        <td>Peso:</td>
-        <td><input type="number" step="any"/>
-          <select>
-            <option selected>libras</option>
-            <option>kilos</option>
-          </select>
-        </td>
-      </tr>
-    </table>
+    <div class="row">
+      <div class="col">
+        <p>Contrato:</p>
+      </div>
+      <div class="col">
+        <strong>Movimiento</strong>
+      </div>
+    </div>
+    <div class="row">
+       <div class="col">
+        <p>Categoría:</p>
+      </div>
+      <div class="col">
+        <a ui-sref="sucursales" class="button button-positive init-button">Sucursales</a>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

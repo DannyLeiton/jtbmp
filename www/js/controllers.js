@@ -7,49 +7,73 @@ angular.module('starter.controllers', [])
 
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
-    scope: $scope
+    scope: $scope,
+    backdropClickToClose: false,
+    animation: 'slide-in-up'
   }).then(function(modal) {
-    $scope.modal = modal;
+      $scope.oModal1 = modal;
   });
+
+   // Open the login modal
+  $scope.login = function() {
+    $scope.oModal1.show();
+  };
 
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {
-    $scope.modal.hide();
+    $scope.oModal1.hide();
   };
 
-  // Open the login modal
-  $scope.login = function() {
-    $scope.modal.show();
+  $scope.doLogin = function() {
+    $scope.showAlert('¡Autenticación correcta!');
+  };
+
+  // An alert dialog
+  $scope.showAlert = function(texto) {
+      var alertPopup = $ionicPopup.alert({
+      title: texto
+    });
+      alertPopup.then(function(res) {
+      $scope.loggedIn();
+    });
   };
 
   // Succesfully Loggedin
   $scope.loggedIn = function() {
-    $scope.modal.hide();
+    $scope.oModal1.hide();
     $state.go('tab.paquetes');
   };
 
-  // Perform the login action when the user submits the login form
-  $scope.doLogin = function() {
-    //console.log('Doing login', $scope.loginData);
-    $scope.showAlert('¡Autenticación correcta!');
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    /*$timeout(function() {
-      $scope.closeLogin();
-    }, 1000);*/
+  $ionicModal.fromTemplateUrl('templates/afiliacion.html', {
+    scope: $scope,
+    backdropClickToClose: false,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+      $scope.oModal2 = modal;
+  });
+
+  $scope.afiliacion = function() {
+    $scope.oModal2.show();
   };
 
- // An alert dialog
-$scope.showAlert = function(texto) {
-   var alertPopup = $ionicPopup.alert({
-     title: texto
-   });
-   alertPopup.then(function(res) {
-     $scope.loggedIn();
-   });
- };
+  $scope.doAfiliacion = function() {
+    $scope.showAlert2('¡Afiliado exitosamente!');
+  };
 
+  // An alert dialog
+  $scope.showAlert2 = function(texto) {
+      var alertPopup = $ionicPopup.alert({
+      title: texto
+    });
+      alertPopup.then(function(res) {
+      $scope.afiliado();
+    });
+  };
 
+  $scope.afiliado = function() {
+    $scope.oModal2.hide();
+    $state.go('tab.paquetes');
+  };
 
 })
 
@@ -92,9 +116,6 @@ $scope.showAlert = function(texto) {
 
 .controller('SucursalesCtrl', function($scope, Sucursales) {
   $scope.sucursales = Sucursales.all();
-  $scope.remove = function(sucursal) {
-    Sucursales.remove(sucursal);
-  };
 })
 
 .controller('SucursalDetailCtrl', function($scope, $stateParams, Sucursales) {

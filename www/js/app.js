@@ -91,7 +91,7 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
     }
   })
   
-   .state('tab.preaviso', {
+  .state('tab.preaviso', {
     url: '/preaviso',
     views: {
       'tab-preaviso': {
@@ -100,11 +100,19 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
       }
     }
   })
+
 .state('sucursales',{
   url: '/sucursales-alone',
-   templateUrl: 'templates/tab-sucursales.html',
-       controller: 'SucursalesCtrl'
+  templateUrl: 'templates/sucursales.html',
+  controller: 'SucursalesCtrl'
 })
+
+.state('sucursal-detail', {
+   url: '/sucursales-alone/:sucursalId',
+   templateUrl: 'templates/sucursal-detail.html',
+   controller: 'SucursalDetailCtrl'
+ })
+
  .state('tab.sucursales', {
    url: '/sucursales',
    views: {
@@ -125,6 +133,18 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
    }
  })
  
+  .state('ofertas',{
+    url: '/ofertas-alone',
+    templateUrl: 'templates/ofertas.html',
+    controller: 'OfertasCtrl'
+  })
+
+  .state('oferta-detail', {
+    url: '/ofertas-alone/:ofertaId',
+    templateUrl: 'templates/oferta-detail.html',
+    controller: 'OfertaDetailCtrl'
+  })
+
  .state('tab.ofertas', {
    url: '/ofertas',
    views: {

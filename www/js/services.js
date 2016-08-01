@@ -5,27 +5,27 @@ angular.module('starter.services', [])
     id: 0,
     name: 'Zapatos',
     lastText: 'AMAZON',
-    face: 'img/ben.png'
+    face: 'img/entregado.png'
   }, {
     id: 1,
     name: 'Camisetas',
     lastText: 'EBAY',
-    face: 'img/max.png'
+    face: 'img/preaviso.png'
   }, {
     id: 2,
     name: 'Juguetes',
     lastText: 'AMAZON',
-    face: 'img/adam.jpg'
+    face: 'img/transCR.png'
   }, {
     id: 3,
     name: 'Libros',
     lastText: 'AMAZON',
-    face: 'img/perry.png'
+    face: 'img/recibSuc.png'
   }, {
     id: 4,
     name: 'Video Juego',
     lastText: 'NEWEGG',
-    face: 'img/mike.png'
+    face: 'img/bodegaCR.png'
   }];
 
   return {

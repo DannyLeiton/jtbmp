@@ -94,7 +94,7 @@ angular.module('starter.controllers', [])
   
   $scope.changeTab = function (n) {
       $scope.activeItems = $scope.items[n];
-      $scope.$appy();
+      $scope.$apply();
   };
   
   $scope.doRefresh = function() {

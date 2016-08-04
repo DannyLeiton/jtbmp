@@ -117,27 +117,99 @@ angular.module('starter.controllers', [])
     $scope.package = Paquetes.getpackage($stateParams.paqueteId);
   })
 
-  .controller('CalculadoraCtrl', function ($scope) { })
+  .controller('CalculadoraCtrl', function($scope, $ionicModal, $ionicPopup, $timeout, $state) {
+  $ionicModal.fromTemplateUrl('templates/micuenta.html', {
+    scope: $scope,
+    backdropClickToClose: false,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.oModal1 = modal;
+  });
 
-  .controller('PreavisoCtrl', function ($scope) { })
+  $scope.miCuenta = function() {
+    $scope.oModal1.show();
+  };
 
-  .controller('SucursalesCtrl', function ($scope, Sucursales) {
-    $scope.sucursales = Sucursales.all();
-  })
+  $scope.closeCuenta = function() {
+    $scope.oModal1.hide();
+    $state.go('init');
+  };
+})
 
-  .controller('SucursalDetailCtrl', function ($scope, $stateParams, Sucursales) {
-    $scope.sucursal = Sucursales.get($stateParams.sucursalId);
-  })
+.controller('PreavisoCtrl', function($scope, $ionicModal, $ionicPopup, $timeout, $state) {
+  $ionicModal.fromTemplateUrl('templates/micuenta.html', {
+    scope: $scope,
+    backdropClickToClose: false,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.oModal1 = modal;
+  });
 
-  .controller('OfertasCtrl', function ($scope, Ofertas) {
-    $scope.ofertas = Ofertas.all();
-    $scope.remove = function (oferta) {
-      Ofertas.remove(oferta);
-    };
-  })
+  $scope.miCuenta = function() {
+    $scope.oModal1.show();
+  };
 
-  .controller('OfertaDetailCtrl', function ($scope, $stateParams, Ofertas) {
-    $scope.oferta = Ofertas.get($stateParams.ofertaId);
-  })
+  $scope.closeCuenta = function() {
+    $scope.oModal1.hide();
+    $state.go('init');
+  };
+})
 
-  ;
+.controller('SucursalesCtrl', function($scope, Sucursales, $ionicModal, $ionicPopup, $timeout, $state) {
+  $scope.sucursales = Sucursales.all();
+  $ionicModal.fromTemplateUrl('templates/micuenta.html', {
+    scope: $scope,
+    backdropClickToClose: false,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.oModal1 = modal;
+  });
+
+   // Open the login modal
+  $scope.miCuenta = function() {
+    $scope.oModal1.show();
+  };
+
+  // Triggered in the login modal to close it
+  $scope.closeCuenta = function() {
+    $scope.oModal1.hide();
+    $state.go('init');
+  };
+})
+
+.controller('SucursalDetailCtrl', function($scope, $stateParams, Sucursales) {
+  $scope.sucursal = Sucursales.get($stateParams.sucursalId);
+})
+
+.controller('OfertasCtrl', function($scope, Ofertas, $ionicModal, $ionicPopup, $timeout, $state) {
+  $scope.ofertas = Ofertas.all();
+  $scope.remove = function(oferta) {
+    Ofertas.remove(oferta);
+  };
+
+  $ionicModal.fromTemplateUrl('templates/micuenta.html', {
+    scope: $scope,
+    backdropClickToClose: false,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.oModal1 = modal;
+  });
+
+   // Open the login modal
+  $scope.miCuenta = function() {
+    $scope.oModal1.show();
+  };
+
+  // Triggered in the login modal to close it
+  $scope.closeCuenta = function() {
+    $scope.oModal1.hide();
+    $state.go('init');
+  };
+
+})
+
+.controller('OfertaDetailCtrl', function($scope, $stateParams, Ofertas) {
+  $scope.oferta = Ofertas.get($stateParams.ofertaId);
+})
+
+;

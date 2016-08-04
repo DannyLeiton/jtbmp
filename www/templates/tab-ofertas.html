@@ -1,4 +1,7 @@
 <ion-view view-title="Ofertas">
+  <ion-nav-buttons side="primary">
+    <button id="botonCta" class="button"  icon="ion-ios-person" ng-click="miCuenta()"></button>
+  </ion-nav-buttons>
   <ion-content>
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="oferta in ofertas" type="item-text-wrap" href="#/tab/ofertas/{{oferta.id}}">

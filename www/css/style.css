@@ -12,3 +12,10 @@
 .init-button {
     width: 100%
 }
+
+#botonCta {
+    background-image: url(../img/micuenta.png);
+    width: 27px;
+    height: 18px;
+    background-repeat: no-repeat;
+}

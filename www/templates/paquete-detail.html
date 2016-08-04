@@ -3,12 +3,50 @@
   'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
+  date: '2016-05-05',
+        desc: "S7",
+        type: "entregado",        
+        time: '2:00 pm',
+        guide: '4348783',
+        tracking: '1234567890',
+        from: 'Amazon',
+        promo: 'Aniversario',
+        pieces: '1',
+        weight: '8.0kg'
 -->
-<ion-view view-title="{{paquete.name}}">
+<ion-view view-title="{{package.name}}">
   <ion-content class="padding">
-    <img ng-src="{{paquete.face}}" style="width: 64px; height: 64px">
-    <p>
-      {{paquete.lastText}}
-    </p>
+    <ion-list>
+      <ion-item style="background-color:red;color:white !important;">
+        TB090 PRUEBA PROPUESTA
+      </ion-item>
+      <ion-item>
+        <img ng-src="/img/{{package.type}}.png" style="width: 64px; height: 64px">
+        <p>{{package.state}}</p>
+        <p>En Bodega</p>
+      </ion-item>
+      <ion-item>
+        <p>Descripcion: {{package.desc}}</p>
+      
+      </ion-item>
+      <ion-item>
+        <p>Fecha: {{package.date}}</p>
+        <p>Hora: {{package.time}}</p>
+        <p>Guia: {{package.guide}}</p>
+      </ion-item>
+      <ion-item>
+        <p>Fecha: {{package.tracking}}</p>
+      </ion-item>
+      <ion-item>
+        <p>Remitente: {{package.from}}</p>
+      </ion-item>
+      <ion-item>
+        <p>Promoción: {{package.promo}}</p>
+      </ion-item>
+      <ion-item>
+        <p>Piezas: {{package.pieces}}</p>
+        <p>Peso: {{package.weight}}</p>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

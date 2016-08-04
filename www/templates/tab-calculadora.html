@@ -1,4 +1,7 @@
 <ion-view view-title="Calculadora">
+  <ion-nav-buttons side="primary">
+    <button id="botonCta" class="button"  icon="ion-ios-person" ng-click="miCuenta()"></button>
+  </ion-nav-buttons>
   <ion-content>
     <form ng-submit="doCalculo()">
       <label class="item item-input">
@@ -27,7 +30,5 @@
       </label>
       <button class="button button-positive init-button">Calcular</button>
     </form>
-    
-
   </ion-content>
 </ion-view>

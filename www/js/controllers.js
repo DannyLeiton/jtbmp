@@ -77,15 +77,7 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller('DashCtrl', function ($scope) { })
-
-  .controller('AccountCtrl', function ($scope) {
-    $scope.settings = {
-      enableFriends: true
-    };
-  })
-
-  .controller('PaquetesCtrl', function ($scope, Paquetes) {
+  .controller('PaquetesCtrl', function ($scope, Paquetes, $ionicModal, $ionicPopup, $state) {
     $scope.items = [
       [{ nPaquete: 1, date:'2016-05-05', desc: "Xbox", state:'Entregado', type:"entregado" }, 
       { nPaquete: 2,date:'2016-05-05', desc: "PS4",type:"entregado" }, 
@@ -93,7 +85,7 @@ angular.module('starter.controllers', [])
       , [{ nPaquete: 4,date:'2016-05-05', desc: "Aifone", type:"entregado"}, 
       { nPaquete: 5,date:'2016-05-05', desc: "GBA",type:"entregado" }, 
       { nPaquete: 6, date:'2016-05-05',desc: "Wii u",type:"entregado" }]
-      , [{ nPaquete: 7, date:'2016-05-05',desc: "S7", type:"bodega" },
+      , [{ nPaquete: 7, date:'2016-05-05',desc: "S7", type:"bodegaCR" },
        { nPaquete: 8, date:'2016-05-05',desc: "huawei", type:"transCR" }, 
        { nPaquete: 9, date:'2016-05-05',desc: "3ds", type:"transSuc"}]];
 
@@ -111,6 +103,24 @@ angular.module('starter.controllers', [])
       $scope.$broadcast('scroll.refreshComplete');
 
     };
+
+    $ionicModal.fromTemplateUrl('templates/micuenta.html', {
+      scope: $scope,
+      backdropClickToClose: false,
+      animation: 'slide-in-up'
+    }).then(function(modal) {
+      $scope.oModal1 = modal;
+    });
+
+    $scope.miCuenta = function() {
+      $scope.oModal1.show();
+    };
+
+    $scope.closeCuenta = function() {
+      $scope.oModal1.hide();
+      $state.go('init');
+    };
+
   })
 
   .controller('PaqueteDetailCtrl', function ($scope, $stateParams, Paquetes) {
